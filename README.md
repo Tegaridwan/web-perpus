@@ -9,7 +9,6 @@ Aplikasi website perpustakaan sederhana, menggunakan php native
 	<li>Crud Anggota</li>
 	<li>Transaksi</li>
 	<li>Fitur Kembali Buku Yang Sudah di Pinjam</li>
-  <li>Perpanjang masa pinjam buku</li>
   <li>Login, Registrasi & Logout</li>
 </ul>
 <br>
