@@ -108,7 +108,7 @@ $aksi = @$_GET['aksi'];
                             <div class="sb-sidenav-menu-heading">Data</div>
                             <a class="nav-link" href="?p=anggota">
                                 <div class="sb-nav-link-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
-                                Data Anggota
+                                Data Petugas
                             </a>
                             <a class="nav-link" href="?p=buku">
                                 <div class="sb-nav-link-icon"><i class="fa fa-book" aria-hidden="true"></i></div>
@@ -120,10 +120,10 @@ $aksi = @$_GET['aksi'];
                             </a>
                         </div>
                     </div>
-                    <div class="sb-sidenav-footer">
+                    <!-- <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
                         Start Bootstrap
-                    </div>
+                    </div> -->
                 </nav>
             </div>
             <div id="layoutSidenav_content">
@@ -142,6 +142,8 @@ $aksi = @$_GET['aksi'];
                             require_once 'page/buku/ubah.php';
                         } else if($aksi == 'hapus') {
                             require_once 'page/buku/hapus.php';
+                        } elseif ($aksi == 'deskripsi') {
+                            require_once 'page/buku/deskripsi.php';
                         }
                     } else if($page == 'anggota') {
                         if($aksi == '') {
@@ -178,12 +180,12 @@ $aksi = @$_GET['aksi'];
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2020</div>
-                            <div>
+                            <!-- <div class="text-muted">Copyright &copy; Your Website 2020</div> -->
+                            <!-- <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;
                                 <a href="#">Terms &amp; Conditions</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </footer>

@@ -35,10 +35,6 @@ if(isset($_POST['regis'])) {
                                     <div class="card-body">
                                         <form action="" method="post" enctype="multipart/form-data">
                                             <div class="form-group">
-                                                <label class="small" for="foto">Upload Foto</label>
-                                                <input class="form-control-file" id="foto" name="foto" type="file" placeholder="Masukan anda lengkap anda" />
-                                            </div>
-                                            <div class="form-group">
                                                 <label class="small mb-1" for="nama">Nama Lengkap</label>
                                                 <input class="form-control py-4" id="nama" name="nama" type="text" placeholder="Masukan anda lengkap anda" />
                                             </div>

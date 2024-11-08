@@ -2,35 +2,54 @@
 session_start();
 require_once 'config/koneksi.php';
 
-if(isset($_SESSION['login'])) {
+// Jika sudah login, arahkan ke halaman utama
+if (isset($_SESSION['login'])) {
     header("Location: index.php");
     exit;
 }
 
-if(isset($_POST['login'])) {
+// Proses login
+if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
     $result = $conn->query("SELECT * FROM tb_user WHERE username = '$username'") or die(mysqli_error($conn));
-    if($result->num_rows === 1) {
+    
+    if ($result->num_rows === 1) {
         $row = $result->fetch_assoc();
-        if(password_verify($password, $row['password'])) {
-            // pasang session
-            $_SESSION['login'] = $row;
+        
+        // Verifikasi password
+        if (password_verify($password, $row['password'])) {
+            // Simpan informasi penting ke dalam session
+            $_SESSION['login'] = true;
+            $_SESSION['id_user'] = $row['id_user'];
+            $_SESSION['username'] = $row['username'];
+            $_SESSION['level'] = $row['level'];
+
+            if (!isset($_SESSION['id_user'])) {
+                echo "<script>alert('Anda harus login terlebih dahulu.'); window.location='login.php';</script>";
+                exit;
+            }
+            
 
             // Cek level dan arahkan ke halaman sesuai level
-            if($row['level'] === 'admin') {
+            if ($row['level'] === 'admin') {
                 header("Location: index.php");
-            } elseif($row['level'] === 'peminjam') {
+            } elseif ($row['level'] === 'peminjam') {
                 header("Location: halaman_peminjam.php");
             } elseif ($row['level'] === 'petugas') {
                 header("Location: halaman_petugas.php");
             }
             exit;
+        } else {
+            echo "<script>alert('Password salah!');</script>";
         }
+    } else {
+        echo "<script>alert('Username tidak ditemukan!');</script>";
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

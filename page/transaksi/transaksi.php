@@ -17,9 +17,6 @@ $sql = $conn->query("SELECT * FROM tb_transaksi INNER JOIN tb_buku
     <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
     <li class="breadcrumb-item active">data transaksi</li>
 </ol>
-<div class="col-md-6">
-    <a href="?p=transaksi&aksi=tambah" class="btn btn-primary mb-3"><i class="fa fa-plus"></i> Tambah Transaksi</a>
-</div>
 <div class="card mb-4">
     <div class="card-header">
         <i class="fas fa-table mr-1"></i>

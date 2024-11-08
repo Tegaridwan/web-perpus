@@ -5,7 +5,7 @@ $ambilBuku = $conn->query("SELECT * FROM tb_buku ORDER BY id_buku DESC") or die(
 ?>
 <h1 class="mt-4">Data Buku</h1>
 <ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
+    <li class="breadcrumb-item"><a href="halaman_petugas.php">Dashboard</a></li>
     <li class="breadcrumb-item active">data buku</li>
 </ol>
 <div class="col-md-6">
