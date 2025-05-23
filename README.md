@@ -1,7 +1,7 @@
 # web-perpus
 Aplikasi website perpustakaan sederhana, menggunakan php native
 <br>
-<p>Aplikasi website berita sederhana yang di buat dengan bahasa program php, javascript, dan menggunakan DBMS (mysql)</p>
+<p>Aplikasi website perpustakaan sederhana yang di buat dengan bahasa program php, javascript, dan menggunakan DBMS (mysql)</p>
 <br>
 <h3>Fitur Pengeloa Admin Website</h3>
 <ul>
